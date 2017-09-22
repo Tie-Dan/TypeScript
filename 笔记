@@ -1,0 +1,63 @@
+TypeScript是Es6的超集 大概是Es7的实现
+    1.编译型语言(js是解释型语言)
+    2.强类型
+    3.真面向对象:有接口、有泛型、有枚举、有访问修饰符
+    4.它遵循AMD规范
+        //AMD 是 RequireJS 在推广过程中对模块定义的规范化产出。
+        //CMD 是 SeaJS 在推广过程中对模块定义的规范化产出。
+比javascript还java的script
+    typescript是不能直接运行在浏览器
+    需要编译:
+        1.下载
+            cnpm install -g  typescript
+        2.编译
+            tsc xxx.ts
+
+类型:(number、string、boolean、symbol、void、null、undefined、enum、any)
+     var a:类型
+1.好理解
+    number、string、boolean、null、undefined、
+2.void 空  一般用于返回值
+3.null  undefined  它们 都是只有一种值
+4.ennum(枚举)--enumerate
+       有限的可能性(性别、星期)
+5.any(变体变量:可以存任何类型)
+        js里面原本的变量
+6.微软:工具:(vb、vc)和tsc 语言:(.net、asp)
+   类型推测(根据初始化值推测类型官方叫 隐试类型声明):
+          var a=12 等于 var a:number
+          var a; 等于 var a:any
+7.冲突检测:(编译器会自动排出掉无用的选项)
+        虽然比不了jdk里面的javac 但是已经很不错了
+8.联合类型:
+        var a=number|boolean;
+9.数组也有类型(也有泛型):
+         var arr:类型[]=xxxxx;
+函数类型:
+
+    1.参数
+          有类型
+          签名检查--个数、类型 得对
+     外部声明变量: declare
+    2.返回值
+10.复合类型(Object Type):
+    var a:{x:number,y;number,z?}
+    a={x:12,y:5}
+接口(interface):
+    *和java的接口类不一样
+    汽车(接口):加油、开、停....
+真面向对象:
+    class写法、extend、多继承...
+   访问修饰符:
+    1.public  公有      任何人可以访问
+    2.private 私有      只有类内部可以访问
+    3.protected 受保护(友元) 只有子类能用
+泛型:(是一种把类型明确的工作推迟到创建对象或者调用方法的时候才去明确的特殊的类型)
+        别跟any搞混了？
+    any:类型随便
+    泛型:类型随便 假如是类型number 里面必须所有都是number
+Array:内部其实是泛型
+
+
+
+
